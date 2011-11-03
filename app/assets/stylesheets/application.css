@@ -1,0 +1,37 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+*/
+
+#contenedor{
+width:960px;
+margin:0 auto;
+border:1px solid blue;
+}
+
+#header{
+width:960px;
+margin:0 auto;
+border:1px solid red;
+}
+
+.preview{
+margin:0 auto;
+width:200px;
+border:1px solid blue;
+background-color:#5182DC;
+float:left;
+margin:10px;
+}
+
+.separaCategoria{
+border:1px solid green;
+background-color:#E4E945;
+margin:10px;
+}
+
+.limpiarFloat{
+clear:both;
+}

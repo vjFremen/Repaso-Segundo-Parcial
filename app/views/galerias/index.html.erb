@@ -1,0 +1,29 @@
+<h1>Listing galerias</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Descripcion</th>
+    <th>Imagen</th>
+    <th>Categoria</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @galerias.each do |galeria| %>
+  <tr>
+    <td><%= galeria.titulo %></td>
+    <td><%= galeria.descripcion %></td>
+    <td><%= image_tag galeria.imagen, :size => "70x70" %></td>
+    <td><%= galeria.categoria.titulo %></td>
+    <td><%= link_to 'Show', galeria %></td>
+    <td><%= link_to 'Edit', edit_galeria_path(galeria) %></td>
+    <td><%= link_to 'Destroy', galeria, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Galeria', new_galeria_path %>

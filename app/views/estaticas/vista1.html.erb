@@ -1,0 +1,26 @@
+<% content_for :head do %>
+	<%= javascript_include_tag "efectos" %>
+<% end %>
+
+<% titulo("Principal") %>
+
+<h1>Estaticas#vista1</h1>
+
+<% @todascategorias = Categoria.all %>
+	<% if !@todascategorias.blank? %>
+	<% for categorias in @todascategorias %>
+		<div class="separaCategoria">
+		 <h2><%= link_to categoria.titulo, categoria %></h2>
+		<% @todasgalerias = categoria.galerias %>
+		<% for galeria in @todasgalerias %>
+			<div class="preview">
+			<h2><%= link_to galeria.titulo, galeria %></h2>
+			<%= image_tag galeria.imagen, :size => "50x50" %>
+			</div>
+		<% end %>
+		
+<div class="limpiarFloat">
+</div>
+</div>
+	<% end %>
+<% end %>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield (:titulo) || "Noticias Ultra-Relevantes" %></title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+</head>
+<body>
+
+<div id="header">
+			<%= image_tag "tunnel.gif", :size => "400x400" %>
+</div>
+
+<div id="contenedor">
+	<ul>
+		<li><%= link_to "Vista Uno", vistaUno_path %> </li>
+		<li><%= link_to "Vista Dos", vistaDos_path %> </li>
+		<li><%= link_to "Vista Tres", vistaTres_path %> </li>
+		<li><%= link_to "Vista Cuatro", vistaCuatro_path %> </li>
+		<li><%= link_to "Galerias", galerias_path %> </li>
+		<li><%= link_to "Categorias", categorias_path %> </li>
+	</ul>	
+
+<%= yield %>
+
+</div>
+</body>
+</html>
